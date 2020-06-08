@@ -1,0 +1,30 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+D:/C++/2/OOP/4 sem/oop_course2_semester2_exam/ContainerInterface.h
+string
+-
+
+D:/C++/2/OOP/4 sem/oop_course2_semester2_exam/RBTree.cpp
+RBTree.h
+D:/C++/2/OOP/4 sem/oop_course2_semester2_exam/RBTree.h
+
+D:/C++/2/OOP/4 sem/oop_course2_semester2_exam/RBTree.h
+string
+-
+iostream
+-
+Server.h
+D:/C++/2/OOP/4 sem/oop_course2_semester2_exam/Server.h
+ContainerInterface.h
+D:/C++/2/OOP/4 sem/oop_course2_semester2_exam/ContainerInterface.h
+
+D:/C++/2/OOP/4 sem/oop_course2_semester2_exam/Server.h
+string
+-
+
