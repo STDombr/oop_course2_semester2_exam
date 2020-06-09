@@ -1,9 +1,9 @@
 //
-// Created by User on 08.06.2020.
+// Created by User on 09.06.2020.
 //
 
-#ifndef OOP_COURSE2_SEMESTER2_EXAM_DLLIST_H
-#define OOP_COURSE2_SEMESTER2_EXAM_DLLIST_H
+#ifndef OOP_COURSE2_SEMESTER2_EXAM_DLCIRCULARLIST_H
+#define OOP_COURSE2_SEMESTER2_EXAM_DLCIRCULARLIST_H
 
 #include <string>
 #include <vector>
@@ -21,7 +21,7 @@ using namespace std;
  * Template interface structure for the List structure that is based on the linked list
  */
 template <class T>
-class DLList : ContainerInterface <T>  {
+class DLCircularList : ContainerInterface <T>  {
 private:
 
     Node <T> *head, *tail;                     //two pointers on the first and the last node
@@ -98,7 +98,7 @@ public:
     /**
      * Default constructor
      */
-    DLList();
+    DLCircularList();
 
     /**
      * Function that get the data by index
@@ -120,18 +120,18 @@ public:
     Node <T>* get_head();
 
     /**
-    * Function that adds the Element to the List
-    *
-    * @param val The value that would be added to the List
-    */
-    void add_element(T val) override;
-
-    /**
     * Function that adds the Node to the List
     *
     * @param val The value that would be added to the List
     */
     void add_node(Node<T> val) override;
+
+    /**
+    * Function that adds the Element to the List
+    *
+    * @param val The value that would be added to the List
+    */
+    void add_element(T val) override;
 
     /**
      * Deletes the last element of the list
@@ -224,33 +224,33 @@ public:
 
     bool generate(int amount) override;
 
-    DLList<T>* get_part_start(int amount) ;
+    DLCircularList<T>* get_part_start(int amount) ;
 
-    DLList<T>* get_part_end(int amount) ;
+    DLCircularList<T>* get_part_end(int amount) ;
 };
 
 /**
  * UNION OPERATION
  */
 template <class T>
-DLList<T> operator + (DLList<T> l1, DLList<T> l2);
+DLCircularList<T> operator + (DLCircularList<T> l1, DLCircularList<T> l2);
 
 /**
  * INTERSECT OPERATION
  */
 template <class T>
-DLList<T> operator * (DLList<T> l1, DLList<T> l2);
+DLCircularList<T> operator * (DLCircularList<T> l1, DLCircularList<T> l2);
 
 /**
  * EXCEPT OPERATION
  */
 template <class T>
-DLList<T> operator - (DLList<T> l1, DLList<T> l2);
+DLCircularList<T> operator - (DLCircularList<T> l1, DLCircularList<T> l2);
 
 /**
  * SYMMETRIC EXCEPT OPERATION
  */
 template <class T>
-DLList<T> operator % (DLList<T> l1, DLList<T> l2);
+DLCircularList<T> operator % (DLCircularList<T> l1, DLCircularList<T> l2);
 
-#endif //OOP_COURSE2_SEMESTER2_EXAM_DLLIST_H
+#endif //OOP_COURSE2_SEMESTER2_EXAM_DLCIRCULARLIST_H

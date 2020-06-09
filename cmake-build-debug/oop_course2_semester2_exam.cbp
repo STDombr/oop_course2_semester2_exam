@@ -80,16 +80,40 @@
 				</MakeCommands>
 			</Target>
 		</Build>
+		<Unit filename="D:/C++/2/OOP/4 sem/oop_course2_semester2_exam/BTree.cpp">
+			<Option target="oop_course2_semester2_exam"/>
+		</Unit>
+		<Unit filename="D:/C++/2/OOP/4 sem/oop_course2_semester2_exam/BTree.h">
+			<Option target="oop_course2_semester2_exam"/>
+		</Unit>
+		<Unit filename="D:/C++/2/OOP/4 sem/oop_course2_semester2_exam/Book.cpp">
+			<Option target="oop_course2_semester2_exam"/>
+		</Unit>
+		<Unit filename="D:/C++/2/OOP/4 sem/oop_course2_semester2_exam/Book.h">
+			<Option target="oop_course2_semester2_exam"/>
+		</Unit>
 		<Unit filename="D:/C++/2/OOP/4 sem/oop_course2_semester2_exam/ContainerInterface.cpp">
 			<Option target="oop_course2_semester2_exam"/>
 		</Unit>
 		<Unit filename="D:/C++/2/OOP/4 sem/oop_course2_semester2_exam/ContainerInterface.h">
 			<Option target="oop_course2_semester2_exam"/>
 		</Unit>
+		<Unit filename="D:/C++/2/OOP/4 sem/oop_course2_semester2_exam/DLCircularList.cpp">
+			<Option target="oop_course2_semester2_exam"/>
+		</Unit>
+		<Unit filename="D:/C++/2/OOP/4 sem/oop_course2_semester2_exam/DLCircularList.h">
+			<Option target="oop_course2_semester2_exam"/>
+		</Unit>
 		<Unit filename="D:/C++/2/OOP/4 sem/oop_course2_semester2_exam/DLList.cpp">
 			<Option target="oop_course2_semester2_exam"/>
 		</Unit>
 		<Unit filename="D:/C++/2/OOP/4 sem/oop_course2_semester2_exam/DLList.h">
+			<Option target="oop_course2_semester2_exam"/>
+		</Unit>
+		<Unit filename="D:/C++/2/OOP/4 sem/oop_course2_semester2_exam/Node.cpp">
+			<Option target="oop_course2_semester2_exam"/>
+		</Unit>
+		<Unit filename="D:/C++/2/OOP/4 sem/oop_course2_semester2_exam/Node.h">
 			<Option target="oop_course2_semester2_exam"/>
 		</Unit>
 		<Unit filename="D:/C++/2/OOP/4 sem/oop_course2_semester2_exam/RBTree.cpp">

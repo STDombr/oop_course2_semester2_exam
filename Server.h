@@ -25,6 +25,8 @@ public:
     string get_rackModel();
     string get_companyName();
 
+    void random();
+
     void set_companyName(string name);
 
     /**
@@ -35,6 +37,10 @@ public:
     * @return The bool value that define the answer of the operator "<="
     */
     friend bool operator == (Server left, Server right);
+    friend bool operator >= (Server left, Server right);
+    friend bool operator <= (Server left, Server right);
+    friend bool operator > (Server left, Server right);
+    friend bool operator < (Server left, Server right);
 };
 
 

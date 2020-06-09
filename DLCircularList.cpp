@@ -1,14 +1,14 @@
 //
-// Created by User on 08.06.2020.
+// Created by User on 09.06.2020.
 //
 
-#include "DLList.h"
+#include "DLCircularList.h"
 
 /**
 * Function returns the current size of the list
 */
 template<class T>
-int DLList<T>::get_curr_size() {
+int DLCircularList<T>::get_curr_size() {
     return node_sum;
 }
 
@@ -18,14 +18,14 @@ int DLList<T>::get_curr_size() {
 * @return the max int in the list
 */
 template <class T>
-int DLList <T> :: get_max_int(){
+int DLCircularList <T> :: get_max_int(){
     if (typeid(T).name() != typeid(int).name()){
         cout << "Sorry, your values are not integers"<< endl;    //if elements are not int
         return 0;
     }
     int a = head->data;                 //parcing all the list. The biggest int is saved in 'a'
-    Node <T> *start = head;
-    while (start != nullptr){
+    Node <T> *start = head->next;
+    while (start != head){
         if (a < start->data)
             a = start->data;
         start = start->next;
@@ -40,7 +40,7 @@ int DLList <T> :: get_max_int(){
  * @param b Index b to swap
  */
 template <class T>
-void DLList <T> :: swap(Node <T> *a, Node <T> *b) {
+void DLCircularList <T> :: swap(Node <T> *a, Node <T> *b) {
 
     //cathing the possible error
     if(a == nullptr || b == nullptr){
@@ -62,7 +62,7 @@ void DLList <T> :: swap(Node <T> *a, Node <T> *b) {
 * @return the Index of the end of the sorted part of the linked list
 */
 template <class T>
-Node <T>* DLList <T> :: partition_quicksort(Node <T> *start, Node <T> *finish){
+Node <T>* DLCircularList <T> :: partition_quicksort(Node <T> *start, Node <T> *finish){
 
     T piv_data = finish->data;      //data that pivot contain
     Node <T>* temp = start->prev;   //pointer on the place to swap the values
@@ -71,7 +71,7 @@ Node <T>* DLList <T> :: partition_quicksort(Node <T> *start, Node <T> *finish){
     //partition part
     for (j = start; j !=finish; j = j->next) {
         if (j->data <= piv_data) {
-            if (temp == nullptr)
+            if (temp == finish)
                 temp = start;
             else
                 temp = temp->next;
@@ -80,7 +80,7 @@ Node <T>* DLList <T> :: partition_quicksort(Node <T> *start, Node <T> *finish){
     }
 
     //swapping the pivot
-    if (temp == nullptr )
+    if (temp == finish)
         temp = start;
     else
         temp = temp->next;
@@ -96,9 +96,9 @@ Node <T>* DLList <T> :: partition_quicksort(Node <T> *start, Node <T> *finish){
 * @param finish The end of the sublist to sort
 */
 template <class T>
-void DLList <T> :: _quicksort(Node <T> *start, Node <T> *finish){
+void DLCircularList <T> :: _quicksort(Node <T> *start, Node <T> *finish){
 
-    if (finish != nullptr && start != finish && start != finish->next){
+    if (finish != nullptr && start != finish){
         Node <T> *pivot = partition_quicksort(start, finish);   //finding the place to pivot
         _quicksort(start, pivot->prev);            //doing the same to the left part
         _quicksort(pivot->next, finish);           //doing the same to the right part
@@ -114,7 +114,7 @@ void DLList <T> :: _quicksort(Node <T> *start, Node <T> *finish){
 * @param second The second part of the input linked list
 */
 template <class T>
-void DLList <T> :: listsplit_mergesort(Node <T> *start, Node <T> **first, Node <T> **second){
+void DLCircularList <T> :: listsplit_mergesort(Node <T> *start, Node <T> **first, Node <T> **second){
 
     //Catching the possible error
     if (start == nullptr){
@@ -127,9 +127,9 @@ void DLList <T> :: listsplit_mergesort(Node <T> *start, Node <T> **first, Node <
     slow = start;
 
     //the algorithm on dividing the list on two lists
-    while (fast != nullptr){
+    while (fast != start){
         fast = fast->next;
-        if (fast != nullptr){
+        if (fast != start){
             slow = slow->next;
             fast = fast->next;
         }
@@ -148,7 +148,7 @@ void DLList <T> :: listsplit_mergesort(Node <T> *start, Node <T> **first, Node <
 * @return The merged linked list
 */
 template <class T>
-Node <T>* DLList<T> :: merge(Node <T> *first, Node <T> *second){
+Node <T>* DLCircularList<T> :: merge(Node <T> *first, Node <T> *second){
 
     Node <T> *result;               //pointer on the result linked
 
@@ -175,7 +175,7 @@ Node <T>* DLList<T> :: merge(Node <T> *first, Node <T> *second){
 * @param source The pointer on the linked list that would be sorted
 */
 template <class T>
-void DLList <T> :: _mergesort(Node <T> **source)
+void DLCircularList <T> :: _mergesort(Node <T> **source)
 {
     Node <T> *start = *source;
     Node <T> *first;
@@ -202,7 +202,7 @@ void DLList <T> :: _mergesort(Node <T> **source)
     temp = head;
     if (temp == nullptr)
         return;
-    while (temp->next != nullptr){
+    while (temp->next != head){
         temp = temp->next;
     }
     tail = temp;
@@ -215,14 +215,14 @@ void DLList <T> :: _mergesort(Node <T> **source)
 * @param length The length of this array
 */
 template <class T>
-void DLList <T> :: fill_array_0(int in[], int length){
+void DLCircularList <T> :: fill_array_0(int in[], int length){
     for (int i = 0; i < length; i++){
         in[i] = 0;
     }
 }
 
 template<class T>
-T DLList<T>::get_by_index(int index)
+T DLCircularList<T>::get_by_index(int index)
 {
 
     Node<T>* temp = this->head;
@@ -238,7 +238,7 @@ T DLList<T>::get_by_index(int index)
 * @return the pointer on the tail of the list
 */
 template <class T>
-Node <T>* DLList <T> :: get_tail(){
+Node <T>* DLCircularList <T> :: get_tail(){
     return tail;
 }
 
@@ -248,17 +248,17 @@ Node <T>* DLList <T> :: get_tail(){
  * @return the pointer on the head of the list
  */
 template <class T>
-Node <T>* DLList <T> :: get_head(){
+Node <T>* DLCircularList <T> :: get_head(){
     return head;
 }
 
 /**
-* Function that adds the Element to the List
+* Function that adds the Node to the List
 *
 * @param val The value that would be added to the List
 */
 template <class T>
-void DLList <T> :: add_element(T val){
+void DLCircularList <T> :: add_element(T val){
 
     auto *new_node = new Node <T>;
     new_node->data = val;
@@ -270,26 +270,9 @@ void DLList <T> :: add_element(T val){
         tail = new_node;
     } else {
         new_node->prev = tail;
+        new_node->next = head;
+        head->prev = new_node;
         tail->next = new_node;
-        tail = tail->next;
-    }
-
-    node_sum ++;                    //updated the number of the nodes
-}
-
-/**
-* Function that adds the Node to the List
-*
-* @param val The value that would be added to the List
-*/
-template <class T>
-void DLList <T> :: add_node(Node<T> val){
-    if (head == nullptr){
-        head = val;
-        tail = val;
-    } else {
-        val->prev = tail;
-        tail->next = val;
         tail = tail->next;
     }
 
@@ -300,10 +283,10 @@ void DLList <T> :: add_node(Node<T> val){
 * Function that prints all the data from the list on the screen
 */
 template <class T>
-void DLList <T> :: display(){
-
+void DLCircularList <T> :: display(){
+    int k = get_curr_size();
     Node<T> *temp = head;
-    while(temp != nullptr)
+    for (int i = 0;i < k; i++)
     {
         cout << temp->data << " ";
         temp = temp->next;
@@ -315,7 +298,7 @@ void DLList <T> :: display(){
 * Function that shows the error message for all types of data that are not expected to use
 */
 template <class T>
-void DLList <T> :: countingsort(int exp, int max_int) {
+void DLCircularList <T> :: countingsort(int exp, int max_int) {
     cout << "You cannot use this sort for this type of data" << endl;
 }
 
@@ -331,7 +314,7 @@ void DLList <T> :: countingsort(int exp, int max_int) {
 *        value for a sorted integer
 */
 template <>
-inline void DLList <int> :: countingsort(int exp, int max_int){
+inline void DLCircularList <int> :: countingsort(int exp, int max_int){
 
     //exp is used to radix algorithm. If u want to use this sort in default conditions
     //the value of exp and ten must be = 1 and 50 respectively (just don't touch it)
@@ -358,11 +341,11 @@ inline void DLList <int> :: countingsort(int exp, int max_int){
     int temp;
 
     //creating the index array
-    while (start != nullptr){
+    do{
         temp = (start->data / exp) % max_int;
         index[temp]++;                         //incrementing the index val of the current value
         start = start->next;
-    }
+    }while (start != tail);
 
     //modifying the index array
     for (int i = 1; i < max_int; i++){
@@ -373,20 +356,20 @@ inline void DLList <int> :: countingsort(int exp, int max_int){
     if (max_int == 10){
         start = tail;
         // for (int s = num - 1; s >= 0; s--){
-        while (start != nullptr){
+        do {
             temp = start->data;
             out[index[(temp / exp) % max_int] - 1] = temp;
             index[(temp / exp) % max_int]--;
             start = start->prev;
-        }
+        }while (start != head);
     } else {
         start = head;
-        while (start != nullptr) {
+         do {
             temp = start->data;
             out[index[(temp / exp) % max_int] - 1] = temp;
             index[(temp / exp) % max_int]--;
             start = start->next;
-        }
+        }while (start != tail);
     }
 
     //rewriting the values in the linked list from the output array
@@ -398,7 +381,7 @@ inline void DLList <int> :: countingsort(int exp, int max_int){
 }
 
 template<class T>
-bool DLList<T>::pop_node() {
+bool DLCircularList<T>::pop_node() {
     if(tail == nullptr)
         return false;
     Node<T>* temp = tail;
@@ -410,7 +393,7 @@ bool DLList<T>::pop_node() {
         return true;
     }
     tail = tail->prev;
-    tail->next = nullptr;
+    tail->next = head;
     node_sum--;
     delete temp;
     return true;
@@ -422,22 +405,18 @@ bool DLList<T>::pop_node() {
  * @return true if success
  */
 template<class T>
-bool DLList<T>::delete_node(T element) {
+bool DLCircularList<T>::delete_node(T element) {
     Node<T>* temp = get_head();
 
-    while(temp){
+    do {
         if(temp->data == element){
-            if(temp->prev){
-                temp->prev->next = temp->next;
-            }
-            if(temp->next){
-                temp->next->prev = temp->prev;
-            }
+            temp->prev->next = temp->next;
+            temp->next->prev = temp->prev;
             delete(temp);
             return true;
         }
         temp = temp->next;
-    }
+    }while(temp != tail);
     return false;
 }
 
@@ -445,7 +424,7 @@ bool DLList<T>::delete_node(T element) {
 * Function that performs the selection sort algorithm
 */
 template <class T>
-void DLList <T> :: selection_sort() {
+void DLCircularList <T> :: selection_sort() {
 
     Node <T> *curr = head;
 
@@ -456,18 +435,18 @@ void DLList <T> :: selection_sort() {
 
     Node <T> *iterator, *min;
 
-    while(curr != nullptr){
+    do {
         //save the smallest val in order to place it on the start of unsorted part of the array
         min = curr;
         iterator = curr->next;
-        while(iterator != nullptr){
+        do {
             if(iterator->data <= min->data)
                 min = iterator;
             iterator = iterator->next;
-        }
+        }while(iterator != tail);
         swap(curr, min);
         curr = curr->next;
-    }
+    }while(curr != tail);
 }
 
 
@@ -475,7 +454,7 @@ void DLList <T> :: selection_sort() {
 * Function that basically calls the _quicksort function that is in private section
 */
 template <class T>
-void DLList <T> :: quicksort(){
+void DLCircularList <T> :: quicksort(){
     _quicksort(get_head(),get_tail());  //calls the function
 }
 
@@ -483,19 +462,19 @@ void DLList <T> :: quicksort(){
 * Function that basically calls the _mergesort function that is in private section
 */
 template <class T>
-void DLList <T> :: mergesort(){
+void DLCircularList <T> :: mergesort(){
     _mergesort(&head);          //calls the function
 }
 
 template<class T>
-DLList<T>::DLList() {
+DLCircularList<T>::DLCircularList() {
     node_sum = 0;
     head = nullptr;
     tail = nullptr;
 }
 
 template<class T>
-T &DLList<T>::operator[](int i) {
+T &DLCircularList<T>::operator[](int i) {
     Node<T>* temp = this->head;
     for(int j = 0; j < i; j++){
         temp = temp->next;
@@ -504,85 +483,24 @@ T &DLList<T>::operator[](int i) {
 }
 
 template<class T>
-T* DLList<T>::get_Server_by_serverID(string serverID) {
-    return nullptr;
-}
-
-template <>
-Server* DLList<Server>::get_Server_by_serverID(string serverID) {
-    Node<Server>* iter = this->get_head();
-
-    while(iter){
-        if(iter->data.get_serverID() == serverID)
-            return &(iter->data);
-        iter = iter->next;
-    }
-    return nullptr;
-}
-
-template<class T>
-bool DLList<T>::change_companyName_by_serverID(string serverID, string newCompanyName){
-    return false;
-}
-
-template <>
-bool DLList<Server>::change_companyName_by_serverID(string serverID, string newCompanyName){
-    Server* temp = get_Server_by_serverID(serverID);
-    if(temp){
-        temp->set_companyName(newCompanyName);
-        return true;
-    }
-    return false;
-}
-
-template<class T>
-bool DLList<T>::add_Server_by_serverID(string serverID, string name, string dataCenter, string rackModel) {
-    return false;
-}
-
-template <>
-bool DLList<Server>::add_Server_by_serverID(string serverID, string name, string dataCenter, string rackModel){
-    if(!get_Server_by_serverID(serverID)){
-        Server newServer(name, dataCenter, rackModel, serverID);
-        this->add_element(newServer);
-        return true;
-    }
-    return false;
-}
-
-template<class T>
-bool DLList<T>::delete_Server_by_serverID(string serverID) {
-    return false;
-}
-
-template<>
-bool DLList<Server>::delete_Server_by_serverID(string serverID) {
-    Server* temp = get_Server_by_serverID(serverID);
-    if(temp){
-        return delete_node(*temp);
-    }
-    return false;
-}
-
-template<class T>
-bool DLList<T>::is_present(T element) {
+bool DLCircularList<T>::is_present(T element) {
     Node<T>* temp = get_head();
-    while(temp){
+    {
         if(temp->data == element)
             return true;
         temp = temp->next;
-    }
+    }while(temp != tail);
     return false;
 }
 
 template<class T>
-DLList<T>* DLList<T>::get_part_end(int amount) {
+DLCircularList<T>* DLCircularList<T>::get_part_end(int amount) {
     if(amount > this->get_curr_size() || amount <= 0)
         return nullptr;
     if(amount == this->get_curr_size())
         return this;
     else{
-        auto* newList = new DLList();
+        auto* newList = new DLCircularList();
         Node<T>* temp = this-get_tail();
         for(int i = 0; i < amount; i++){
             newList->add_node(temp[i]);
@@ -593,13 +511,13 @@ DLList<T>* DLList<T>::get_part_end(int amount) {
 }
 
 template<class T>
-DLList<T>* DLList<T>::get_part_start(int amount) {
+DLCircularList<T>* DLCircularList<T>::get_part_start(int amount) {
     if(amount > this->get_curr_size() || amount <= 0)
         return nullptr;
     if(amount == this->get_curr_size())
         return this;
     else{
-        auto* newList = new DLList();
+        auto* newList = new DLCircularList();
         Node<T>* temp = this-get_head();
         for(int i = 0; i < amount; i++){
             newList->add_node(temp[i]);
@@ -610,8 +528,70 @@ DLList<T>* DLList<T>::get_part_start(int amount) {
 }
 
 
+
+template <class T>
+DLCircularList<T> operator + (DLCircularList<T> l1, DLCircularList<T> l2){
+    DLCircularList<T> outputList = l1;
+    for(int i = 0 ; i < l2.get_curr_size(); i++){
+        if(!outputList.is_present(l2[i])){
+            outputList.add_node(l2[i]);
+        }
+    }
+    return outputList;
+}
+
+template <class T>
+DLCircularList<T> operator * (DLCircularList<T> l1, DLCircularList<T> l2){
+    DLCircularList<T> outputList;
+    for(int i = 0 ; i < l2.get_curr_size(); i++){
+        if(l1.is_present(l2[i])){
+            outputList.add_node(l2[i]);
+        }
+    }
+    return outputList;
+}
+
+template <class T>
+DLCircularList<T> operator - (DLCircularList<T> l1, DLCircularList<T> l2){
+    DLCircularList<T> outputList = l1;
+    for(int i = 0 ; i < l2.get_curr_size(); i++){
+        if(!outputList.is_present(l2[i])){
+            outputList.delete_node(l2[i]);
+        }
+    }
+    return outputList;
+}
+
+template <class T>
+DLCircularList<T> operator % (DLCircularList<T> l1, DLCircularList<T> l2) {
+    DLCircularList <T> outputList = l1 + l2 - (l1 * l2);
+    return outputList;
+}
+
+/**
+* Function that adds the Node to the List
+*
+* @param val The value that would be added to the List
+*/
+template <class T>
+void DLCircularList <T> :: add_node(Node<T> val){
+    if (head == nullptr){
+        head = val;
+        tail = val;
+    } else {
+        val->prev = tail;
+        tail->next = val;
+        tail = tail->next;
+        val.next = head;
+        head->prev = val;
+    }
+
+    node_sum ++;                    //updated the number of the nodes
+}
+
+
 template<class T>
-bool DLList<T>::generate(int amount) {
+bool DLCircularList<T>::generate(int amount) {
     if(amount <= 0)
         return false;
 
@@ -629,30 +609,91 @@ bool DLList<T>::generate(int amount) {
 }
 
 template<class T>
-T *DLList<T>::get_book_by_name(string name) {
+T* DLCircularList<T>::get_Server_by_serverID(string serverID) {
     return nullptr;
 }
 
 template <>
-Book *DLList<Book>::get_book_by_name(string name) {
+Server* DLCircularList<Server>::get_Server_by_serverID(string serverID) {
+    Node<Server>* iter = this->get_head();
+
+    do {
+        if(iter->data.get_serverID() == serverID)
+            return &(iter->data);
+        iter = iter->next;
+    }while(iter != tail);
+    return nullptr;
+}
+
+template<class T>
+bool DLCircularList<T>::change_companyName_by_serverID(string serverID, string newCompanyName){
+    return false;
+}
+
+template <>
+bool DLCircularList<Server>::change_companyName_by_serverID(string serverID, string newCompanyName){
+    Server* temp = get_Server_by_serverID(serverID);
+    if(temp){
+        temp->set_companyName(newCompanyName);
+        return true;
+    }
+    return false;
+}
+
+template<class T>
+bool DLCircularList<T>::add_Server_by_serverID(string serverID, string name, string dataCenter, string rackModel) {
+    return false;
+}
+
+template <>
+bool DLCircularList<Server>::add_Server_by_serverID(string serverID, string name, string dataCenter, string rackModel){
+    if(!get_Server_by_serverID(serverID)){
+        Server newServer(name, dataCenter, rackModel, serverID);
+        this->add_element(newServer);
+        return true;
+    }
+    return false;
+}
+
+template<class T>
+bool DLCircularList<T>::delete_Server_by_serverID(string serverID) {
+    return false;
+}
+
+template<>
+bool DLCircularList<Server>::delete_Server_by_serverID(string serverID) {
+    Server* temp = get_Server_by_serverID(serverID);
+    if(temp){
+        return delete_node(*temp);
+    }
+    return false;
+}
+
+template<class T>
+T *DLCircularList<T>::get_book_by_name(string name) {
+    return nullptr;
+}
+
+template <>
+Book *DLCircularList<Book>::get_book_by_name(string name) {
     Node<Book>* iter = this->get_head();
 
-    while(iter){
+    do {
         if(iter->data.get_bookName() == name)
             return &(iter->data);
         iter = iter->next;
-    }
+    }while(iter != tail);
     return nullptr;
 }
 
 
 template<class T>
-bool DLList<T>::change_genre_by_name(string name, string newGenre) {
+bool DLCircularList<T>::change_genre_by_name(string name, string newGenre) {
     return false;
 }
 
 template <>
-bool DLList<Book>::change_genre_by_name(string name, string newGenre){
+bool DLCircularList<Book>::change_genre_by_name(string name, string newGenre){
     Book* temp = get_book_by_name(name);
     if(temp){
         temp->set_genre(newGenre);
@@ -662,12 +703,12 @@ bool DLList<Book>::change_genre_by_name(string name, string newGenre){
 }
 
 template<class T>
-bool DLList<T>::add_book_by_name(string company, string author, int year, string genre, string name) {
+bool DLCircularList<T>::add_book_by_name(string company, string author, int year, string genre, string name) {
     return false;
 }
 
 template <>
-bool DLList<Book>::add_book_by_name(string company, string author, int year, string genre, string name){
+bool DLCircularList<Book>::add_book_by_name(string company, string author, int year, string genre, string name){
     if(!get_book_by_name(name)){
         Book newBook(company,  author,  year,  genre,  name);
         this->add_element(newBook);
@@ -677,12 +718,21 @@ bool DLList<Book>::add_book_by_name(string company, string author, int year, str
 }
 
 template<class T>
-bool DLList<T>::delete_book_by_name(string name) {
+bool DLCircularList<T>::delete_book_by_name(string name) {
+    return false;
+}
+
+template<>
+bool DLCircularList<Book>::delete_book_by_name(string name) {
+    Book* temp = get_book_by_name(name);
+    if(temp){
+        return delete_node(*temp);
+    }
     return false;
 }
 
 template<class T>
-void DLList<T>::bucketsort() {
+void DLCircularList<T>::bucketsort() {
     std::vector<T> b[node_sum];
 
     Node<T> *temp = head;
@@ -704,7 +754,7 @@ void DLList<T>::bucketsort() {
 }
 
 template<>
-void DLList<Book>::bucketsort() {
+void DLCircularList<Book>::bucketsort() {
     std::vector<Book> b[node_sum];
 
     Node<Book> *temp = head;
@@ -726,7 +776,7 @@ void DLList<Book>::bucketsort() {
 }
 
 template<>
-void DLList<Server>::bucketsort() {
+void DLCircularList<Server>::bucketsort() {
     std::vector<Server> b[node_sum];
 
     Node<Server> *temp = head;
@@ -745,52 +795,4 @@ void DLList<Server>::bucketsort() {
             temp->data = b[i][j];
             temp = temp->next;
         }
-}
-
-template<>
-bool DLList<Book>::delete_book_by_name(string name) {
-    Book* temp = get_book_by_name(name);
-    if(temp){
-        return delete_node(*temp);
-    }
-    return false;
-}
-
-template <class T>
-DLList<T> operator + (DLList<T> l1, DLList<T> l2){
-    DLList<T> outputList = l1;
-    for(int i = 0 ; i < l2.get_curr_size(); i++){
-        if(!outputList.is_present(l2[i])){
-            outputList.add_node(l2[i]);
-        }
-    }
-    return outputList;
-}
-
-template <class T>
-DLList<T> operator * (DLList<T> l1, DLList<T> l2){
-    DLList<T> outputList;
-    for(int i = 0 ; i < l2.get_curr_size(); i++){
-        if(l1.is_present(l2[i])){
-            outputList.add_node(l2[i]);
-        }
-    }
-    return outputList;
-}
-
-template <class T>
-DLList<T> operator - (DLList<T> l1, DLList<T> l2){
-    DLList<T> outputList = l1;
-    for(int i = 0 ; i < l2.get_curr_size(); i++){
-        if(!outputList.is_present(l2[i])){
-            outputList.delete_node(l2[i]);
-        }
-    }
-    return outputList;
-}
-
-template <class T>
-DLList<T> operator % (DLList<T> l1, DLList<T> l2){
-    DLList<T> outputList = l1 + l2 - (l1 * l2);
-    return outputList;
 }

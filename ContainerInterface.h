@@ -6,6 +6,7 @@
 #define OOP_COURSE2_SEMESTER2_EXAM_CONTAINERINTERFACE_H
 
 #include <string>
+#include "Node.h"
 
 using namespace std;
 
@@ -17,11 +18,18 @@ class ContainerInterface {
 public:
 
     /**
+     * Pure virtual function that adds the Element to the List
+     *
+     * @param val The value that would be added to the List
+     */
+    virtual void add_element(T val) = 0;
+
+    /**
      * Pure virtual function that adds the Node to the List
      *
      * @param val The value that would be added to the List
      */
-    virtual void add_node(T val) = 0;
+    virtual void add_node(Node<T> val) = 0;
 
     /**
      * Deletes the last element of the list
@@ -75,6 +83,10 @@ public:
     virtual void selection_sort() = 0;
 
     /**
+    * Pure virtual function that performs the bucketsort algorithm
+    */
+    virtual void bucketsort() = 0;
+    /**
      * Pure virtual function that performs the counting sort algorithm. Uses default arguments for simple countingsort.
      * The default values are changed in radixsort algorithm as countingsort is a part of radix sort.
      * This sorting algorithm is valid only for the integers in [0,50)
@@ -105,8 +117,15 @@ public:
 
     virtual bool delete_Server_by_serverID(string serverID) = 0;
 
-    virtual bool generate_Servers(int amount) = 0;
+    virtual bool generate(int amount) = 0;
 
+    virtual T* get_book_by_name(string name) = 0;
+
+    virtual bool change_genre_by_name(string name, string newGenre) = 0;
+
+    virtual bool add_book_by_name(string company, string author, int year, string genre, string name) = 0;
+
+    virtual bool delete_book_by_name(string name) = 0;
 };
 
 

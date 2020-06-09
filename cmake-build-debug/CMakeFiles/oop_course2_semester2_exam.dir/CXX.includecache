@@ -6,25 +6,53 @@
 
 #IncludeRegexTransform: 
 
-D:/C++/2/OOP/4 sem/oop_course2_semester2_exam/ContainerInterface.h
+D:/C++/2/OOP/4 sem/oop_course2_semester2_exam/Book.h
 string
 -
 
-D:/C++/2/OOP/4 sem/oop_course2_semester2_exam/RBTree.cpp
-RBTree.h
-D:/C++/2/OOP/4 sem/oop_course2_semester2_exam/RBTree.h
-
-D:/C++/2/OOP/4 sem/oop_course2_semester2_exam/RBTree.h
+D:/C++/2/OOP/4 sem/oop_course2_semester2_exam/ContainerInterface.h
 string
+-
+Node.h
+D:/C++/2/OOP/4 sem/oop_course2_semester2_exam/Node.h
+
+D:/C++/2/OOP/4 sem/oop_course2_semester2_exam/DLCircularList.cpp
+DLCircularList.h
+D:/C++/2/OOP/4 sem/oop_course2_semester2_exam/DLCircularList.h
+
+D:/C++/2/OOP/4 sem/oop_course2_semester2_exam/DLCircularList.h
+string
+-
+vector
+-
+algorithm
+-
+cstdlib
 -
 iostream
 -
-Server.h
-D:/C++/2/OOP/4 sem/oop_course2_semester2_exam/Server.h
 ContainerInterface.h
 D:/C++/2/OOP/4 sem/oop_course2_semester2_exam/ContainerInterface.h
+Server.h
+D:/C++/2/OOP/4 sem/oop_course2_semester2_exam/Server.h
+Book.h
+D:/C++/2/OOP/4 sem/oop_course2_semester2_exam/Book.h
+Node.h
+D:/C++/2/OOP/4 sem/oop_course2_semester2_exam/Node.h
+
+D:/C++/2/OOP/4 sem/oop_course2_semester2_exam/Node.h
+Server.h
+D:/C++/2/OOP/4 sem/oop_course2_semester2_exam/Server.h
+Book.h
+D:/C++/2/OOP/4 sem/oop_course2_semester2_exam/Book.h
 
 D:/C++/2/OOP/4 sem/oop_course2_semester2_exam/Server.h
 string
+-
+
+D:/C++/2/OOP/4 sem/oop_course2_semester2_exam/main.cpp
+iostream
+-
+ctime
 -
 

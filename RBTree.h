@@ -8,6 +8,7 @@
 #include <string>
 #include <iostream>
 #include "Server.h"
+#include "Book.h"
 #include "ContainerInterface.h"
 
 template <class T>

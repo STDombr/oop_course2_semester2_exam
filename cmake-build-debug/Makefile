@@ -122,6 +122,60 @@ oop_course2_semester2_exam/fast:
 	$(MAKE) -f CMakeFiles\oop_course2_semester2_exam.dir\build.make CMakeFiles/oop_course2_semester2_exam.dir/build
 .PHONY : oop_course2_semester2_exam/fast
 
+BTree.obj: BTree.cpp.obj
+
+.PHONY : BTree.obj
+
+# target to build an object file
+BTree.cpp.obj:
+	$(MAKE) -f CMakeFiles\oop_course2_semester2_exam.dir\build.make CMakeFiles/oop_course2_semester2_exam.dir/BTree.cpp.obj
+.PHONY : BTree.cpp.obj
+
+BTree.i: BTree.cpp.i
+
+.PHONY : BTree.i
+
+# target to preprocess a source file
+BTree.cpp.i:
+	$(MAKE) -f CMakeFiles\oop_course2_semester2_exam.dir\build.make CMakeFiles/oop_course2_semester2_exam.dir/BTree.cpp.i
+.PHONY : BTree.cpp.i
+
+BTree.s: BTree.cpp.s
+
+.PHONY : BTree.s
+
+# target to generate assembly for a file
+BTree.cpp.s:
+	$(MAKE) -f CMakeFiles\oop_course2_semester2_exam.dir\build.make CMakeFiles/oop_course2_semester2_exam.dir/BTree.cpp.s
+.PHONY : BTree.cpp.s
+
+Book.obj: Book.cpp.obj
+
+.PHONY : Book.obj
+
+# target to build an object file
+Book.cpp.obj:
+	$(MAKE) -f CMakeFiles\oop_course2_semester2_exam.dir\build.make CMakeFiles/oop_course2_semester2_exam.dir/Book.cpp.obj
+.PHONY : Book.cpp.obj
+
+Book.i: Book.cpp.i
+
+.PHONY : Book.i
+
+# target to preprocess a source file
+Book.cpp.i:
+	$(MAKE) -f CMakeFiles\oop_course2_semester2_exam.dir\build.make CMakeFiles/oop_course2_semester2_exam.dir/Book.cpp.i
+.PHONY : Book.cpp.i
+
+Book.s: Book.cpp.s
+
+.PHONY : Book.s
+
+# target to generate assembly for a file
+Book.cpp.s:
+	$(MAKE) -f CMakeFiles\oop_course2_semester2_exam.dir\build.make CMakeFiles/oop_course2_semester2_exam.dir/Book.cpp.s
+.PHONY : Book.cpp.s
+
 ContainerInterface.obj: ContainerInterface.cpp.obj
 
 .PHONY : ContainerInterface.obj
@@ -149,6 +203,33 @@ ContainerInterface.cpp.s:
 	$(MAKE) -f CMakeFiles\oop_course2_semester2_exam.dir\build.make CMakeFiles/oop_course2_semester2_exam.dir/ContainerInterface.cpp.s
 .PHONY : ContainerInterface.cpp.s
 
+DLCircularList.obj: DLCircularList.cpp.obj
+
+.PHONY : DLCircularList.obj
+
+# target to build an object file
+DLCircularList.cpp.obj:
+	$(MAKE) -f CMakeFiles\oop_course2_semester2_exam.dir\build.make CMakeFiles/oop_course2_semester2_exam.dir/DLCircularList.cpp.obj
+.PHONY : DLCircularList.cpp.obj
+
+DLCircularList.i: DLCircularList.cpp.i
+
+.PHONY : DLCircularList.i
+
+# target to preprocess a source file
+DLCircularList.cpp.i:
+	$(MAKE) -f CMakeFiles\oop_course2_semester2_exam.dir\build.make CMakeFiles/oop_course2_semester2_exam.dir/DLCircularList.cpp.i
+.PHONY : DLCircularList.cpp.i
+
+DLCircularList.s: DLCircularList.cpp.s
+
+.PHONY : DLCircularList.s
+
+# target to generate assembly for a file
+DLCircularList.cpp.s:
+	$(MAKE) -f CMakeFiles\oop_course2_semester2_exam.dir\build.make CMakeFiles/oop_course2_semester2_exam.dir/DLCircularList.cpp.s
+.PHONY : DLCircularList.cpp.s
+
 DLList.obj: DLList.cpp.obj
 
 .PHONY : DLList.obj
@@ -175,6 +256,33 @@ DLList.s: DLList.cpp.s
 DLList.cpp.s:
 	$(MAKE) -f CMakeFiles\oop_course2_semester2_exam.dir\build.make CMakeFiles/oop_course2_semester2_exam.dir/DLList.cpp.s
 .PHONY : DLList.cpp.s
+
+Node.obj: Node.cpp.obj
+
+.PHONY : Node.obj
+
+# target to build an object file
+Node.cpp.obj:
+	$(MAKE) -f CMakeFiles\oop_course2_semester2_exam.dir\build.make CMakeFiles/oop_course2_semester2_exam.dir/Node.cpp.obj
+.PHONY : Node.cpp.obj
+
+Node.i: Node.cpp.i
+
+.PHONY : Node.i
+
+# target to preprocess a source file
+Node.cpp.i:
+	$(MAKE) -f CMakeFiles\oop_course2_semester2_exam.dir\build.make CMakeFiles/oop_course2_semester2_exam.dir/Node.cpp.i
+.PHONY : Node.cpp.i
+
+Node.s: Node.cpp.s
+
+.PHONY : Node.s
+
+# target to generate assembly for a file
+Node.cpp.s:
+	$(MAKE) -f CMakeFiles\oop_course2_semester2_exam.dir\build.make CMakeFiles/oop_course2_semester2_exam.dir/Node.cpp.s
+.PHONY : Node.cpp.s
 
 RBTree.obj: RBTree.cpp.obj
 
@@ -266,12 +374,24 @@ help:
 	@echo ... oop_course2_semester2_exam
 	@echo ... edit_cache
 	@echo ... rebuild_cache
+	@echo ... BTree.obj
+	@echo ... BTree.i
+	@echo ... BTree.s
+	@echo ... Book.obj
+	@echo ... Book.i
+	@echo ... Book.s
 	@echo ... ContainerInterface.obj
 	@echo ... ContainerInterface.i
 	@echo ... ContainerInterface.s
+	@echo ... DLCircularList.obj
+	@echo ... DLCircularList.i
+	@echo ... DLCircularList.s
 	@echo ... DLList.obj
 	@echo ... DLList.i
 	@echo ... DLList.s
+	@echo ... Node.obj
+	@echo ... Node.i
+	@echo ... Node.s
 	@echo ... RBTree.obj
 	@echo ... RBTree.i
 	@echo ... RBTree.s

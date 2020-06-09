@@ -121,13 +121,69 @@ CMakeFiles/oop_course2_semester2_exam.dir/RBTree.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/oop_course2_semester2_exam.dir/RBTree.cpp.s"
 	C:\PROGRA~2\MINGW-~1\I686-8~1.0-P\mingw32\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "D:\C++\2\OOP\4 sem\oop_course2_semester2_exam\RBTree.cpp" -o CMakeFiles\oop_course2_semester2_exam.dir\RBTree.cpp.s
 
+CMakeFiles/oop_course2_semester2_exam.dir/Book.cpp.obj: CMakeFiles/oop_course2_semester2_exam.dir/flags.make
+CMakeFiles/oop_course2_semester2_exam.dir/Book.cpp.obj: ../Book.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="D:\C++\2\OOP\4 sem\oop_course2_semester2_exam\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/oop_course2_semester2_exam.dir/Book.cpp.obj"
+	C:\PROGRA~2\MINGW-~1\I686-8~1.0-P\mingw32\bin\G__~1.EXE  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\oop_course2_semester2_exam.dir\Book.cpp.obj -c "D:\C++\2\OOP\4 sem\oop_course2_semester2_exam\Book.cpp"
+
+CMakeFiles/oop_course2_semester2_exam.dir/Book.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/oop_course2_semester2_exam.dir/Book.cpp.i"
+	C:\PROGRA~2\MINGW-~1\I686-8~1.0-P\mingw32\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "D:\C++\2\OOP\4 sem\oop_course2_semester2_exam\Book.cpp" > CMakeFiles\oop_course2_semester2_exam.dir\Book.cpp.i
+
+CMakeFiles/oop_course2_semester2_exam.dir/Book.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/oop_course2_semester2_exam.dir/Book.cpp.s"
+	C:\PROGRA~2\MINGW-~1\I686-8~1.0-P\mingw32\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "D:\C++\2\OOP\4 sem\oop_course2_semester2_exam\Book.cpp" -o CMakeFiles\oop_course2_semester2_exam.dir\Book.cpp.s
+
+CMakeFiles/oop_course2_semester2_exam.dir/DLCircularList.cpp.obj: CMakeFiles/oop_course2_semester2_exam.dir/flags.make
+CMakeFiles/oop_course2_semester2_exam.dir/DLCircularList.cpp.obj: ../DLCircularList.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="D:\C++\2\OOP\4 sem\oop_course2_semester2_exam\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/oop_course2_semester2_exam.dir/DLCircularList.cpp.obj"
+	C:\PROGRA~2\MINGW-~1\I686-8~1.0-P\mingw32\bin\G__~1.EXE  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\oop_course2_semester2_exam.dir\DLCircularList.cpp.obj -c "D:\C++\2\OOP\4 sem\oop_course2_semester2_exam\DLCircularList.cpp"
+
+CMakeFiles/oop_course2_semester2_exam.dir/DLCircularList.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/oop_course2_semester2_exam.dir/DLCircularList.cpp.i"
+	C:\PROGRA~2\MINGW-~1\I686-8~1.0-P\mingw32\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "D:\C++\2\OOP\4 sem\oop_course2_semester2_exam\DLCircularList.cpp" > CMakeFiles\oop_course2_semester2_exam.dir\DLCircularList.cpp.i
+
+CMakeFiles/oop_course2_semester2_exam.dir/DLCircularList.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/oop_course2_semester2_exam.dir/DLCircularList.cpp.s"
+	C:\PROGRA~2\MINGW-~1\I686-8~1.0-P\mingw32\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "D:\C++\2\OOP\4 sem\oop_course2_semester2_exam\DLCircularList.cpp" -o CMakeFiles\oop_course2_semester2_exam.dir\DLCircularList.cpp.s
+
+CMakeFiles/oop_course2_semester2_exam.dir/Node.cpp.obj: CMakeFiles/oop_course2_semester2_exam.dir/flags.make
+CMakeFiles/oop_course2_semester2_exam.dir/Node.cpp.obj: ../Node.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="D:\C++\2\OOP\4 sem\oop_course2_semester2_exam\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/oop_course2_semester2_exam.dir/Node.cpp.obj"
+	C:\PROGRA~2\MINGW-~1\I686-8~1.0-P\mingw32\bin\G__~1.EXE  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\oop_course2_semester2_exam.dir\Node.cpp.obj -c "D:\C++\2\OOP\4 sem\oop_course2_semester2_exam\Node.cpp"
+
+CMakeFiles/oop_course2_semester2_exam.dir/Node.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/oop_course2_semester2_exam.dir/Node.cpp.i"
+	C:\PROGRA~2\MINGW-~1\I686-8~1.0-P\mingw32\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "D:\C++\2\OOP\4 sem\oop_course2_semester2_exam\Node.cpp" > CMakeFiles\oop_course2_semester2_exam.dir\Node.cpp.i
+
+CMakeFiles/oop_course2_semester2_exam.dir/Node.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/oop_course2_semester2_exam.dir/Node.cpp.s"
+	C:\PROGRA~2\MINGW-~1\I686-8~1.0-P\mingw32\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "D:\C++\2\OOP\4 sem\oop_course2_semester2_exam\Node.cpp" -o CMakeFiles\oop_course2_semester2_exam.dir\Node.cpp.s
+
+CMakeFiles/oop_course2_semester2_exam.dir/BTree.cpp.obj: CMakeFiles/oop_course2_semester2_exam.dir/flags.make
+CMakeFiles/oop_course2_semester2_exam.dir/BTree.cpp.obj: ../BTree.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="D:\C++\2\OOP\4 sem\oop_course2_semester2_exam\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object CMakeFiles/oop_course2_semester2_exam.dir/BTree.cpp.obj"
+	C:\PROGRA~2\MINGW-~1\I686-8~1.0-P\mingw32\bin\G__~1.EXE  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\oop_course2_semester2_exam.dir\BTree.cpp.obj -c "D:\C++\2\OOP\4 sem\oop_course2_semester2_exam\BTree.cpp"
+
+CMakeFiles/oop_course2_semester2_exam.dir/BTree.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/oop_course2_semester2_exam.dir/BTree.cpp.i"
+	C:\PROGRA~2\MINGW-~1\I686-8~1.0-P\mingw32\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "D:\C++\2\OOP\4 sem\oop_course2_semester2_exam\BTree.cpp" > CMakeFiles\oop_course2_semester2_exam.dir\BTree.cpp.i
+
+CMakeFiles/oop_course2_semester2_exam.dir/BTree.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/oop_course2_semester2_exam.dir/BTree.cpp.s"
+	C:\PROGRA~2\MINGW-~1\I686-8~1.0-P\mingw32\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "D:\C++\2\OOP\4 sem\oop_course2_semester2_exam\BTree.cpp" -o CMakeFiles\oop_course2_semester2_exam.dir\BTree.cpp.s
+
 # Object files for target oop_course2_semester2_exam
 oop_course2_semester2_exam_OBJECTS = \
 "CMakeFiles/oop_course2_semester2_exam.dir/main.cpp.obj" \
 "CMakeFiles/oop_course2_semester2_exam.dir/Server.cpp.obj" \
 "CMakeFiles/oop_course2_semester2_exam.dir/DLList.cpp.obj" \
 "CMakeFiles/oop_course2_semester2_exam.dir/ContainerInterface.cpp.obj" \
-"CMakeFiles/oop_course2_semester2_exam.dir/RBTree.cpp.obj"
+"CMakeFiles/oop_course2_semester2_exam.dir/RBTree.cpp.obj" \
+"CMakeFiles/oop_course2_semester2_exam.dir/Book.cpp.obj" \
+"CMakeFiles/oop_course2_semester2_exam.dir/DLCircularList.cpp.obj" \
+"CMakeFiles/oop_course2_semester2_exam.dir/Node.cpp.obj" \
+"CMakeFiles/oop_course2_semester2_exam.dir/BTree.cpp.obj"
 
 # External object files for target oop_course2_semester2_exam
 oop_course2_semester2_exam_EXTERNAL_OBJECTS =
@@ -137,11 +193,15 @@ oop_course2_semester2_exam.exe: CMakeFiles/oop_course2_semester2_exam.dir/Server
 oop_course2_semester2_exam.exe: CMakeFiles/oop_course2_semester2_exam.dir/DLList.cpp.obj
 oop_course2_semester2_exam.exe: CMakeFiles/oop_course2_semester2_exam.dir/ContainerInterface.cpp.obj
 oop_course2_semester2_exam.exe: CMakeFiles/oop_course2_semester2_exam.dir/RBTree.cpp.obj
+oop_course2_semester2_exam.exe: CMakeFiles/oop_course2_semester2_exam.dir/Book.cpp.obj
+oop_course2_semester2_exam.exe: CMakeFiles/oop_course2_semester2_exam.dir/DLCircularList.cpp.obj
+oop_course2_semester2_exam.exe: CMakeFiles/oop_course2_semester2_exam.dir/Node.cpp.obj
+oop_course2_semester2_exam.exe: CMakeFiles/oop_course2_semester2_exam.dir/BTree.cpp.obj
 oop_course2_semester2_exam.exe: CMakeFiles/oop_course2_semester2_exam.dir/build.make
 oop_course2_semester2_exam.exe: CMakeFiles/oop_course2_semester2_exam.dir/linklibs.rsp
 oop_course2_semester2_exam.exe: CMakeFiles/oop_course2_semester2_exam.dir/objects1.rsp
 oop_course2_semester2_exam.exe: CMakeFiles/oop_course2_semester2_exam.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir="D:\C++\2\OOP\4 sem\oop_course2_semester2_exam\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_6) "Linking CXX executable oop_course2_semester2_exam.exe"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir="D:\C++\2\OOP\4 sem\oop_course2_semester2_exam\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_10) "Linking CXX executable oop_course2_semester2_exam.exe"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles\oop_course2_semester2_exam.dir\link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

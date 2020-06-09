@@ -1,6 +1,10 @@
 file(REMOVE_RECURSE
+  "CMakeFiles/oop_course2_semester2_exam.dir/BTree.cpp.obj"
+  "CMakeFiles/oop_course2_semester2_exam.dir/Book.cpp.obj"
   "CMakeFiles/oop_course2_semester2_exam.dir/ContainerInterface.cpp.obj"
+  "CMakeFiles/oop_course2_semester2_exam.dir/DLCircularList.cpp.obj"
   "CMakeFiles/oop_course2_semester2_exam.dir/DLList.cpp.obj"
+  "CMakeFiles/oop_course2_semester2_exam.dir/Node.cpp.obj"
   "CMakeFiles/oop_course2_semester2_exam.dir/RBTree.cpp.obj"
   "CMakeFiles/oop_course2_semester2_exam.dir/Server.cpp.obj"
   "CMakeFiles/oop_course2_semester2_exam.dir/main.cpp.obj"

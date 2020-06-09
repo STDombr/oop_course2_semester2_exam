@@ -4,8 +4,12 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
+  "D:/C++/2/OOP/4 sem/oop_course2_semester2_exam/BTree.cpp" "D:/C++/2/OOP/4 sem/oop_course2_semester2_exam/cmake-build-debug/CMakeFiles/oop_course2_semester2_exam.dir/BTree.cpp.obj"
+  "D:/C++/2/OOP/4 sem/oop_course2_semester2_exam/Book.cpp" "D:/C++/2/OOP/4 sem/oop_course2_semester2_exam/cmake-build-debug/CMakeFiles/oop_course2_semester2_exam.dir/Book.cpp.obj"
   "D:/C++/2/OOP/4 sem/oop_course2_semester2_exam/ContainerInterface.cpp" "D:/C++/2/OOP/4 sem/oop_course2_semester2_exam/cmake-build-debug/CMakeFiles/oop_course2_semester2_exam.dir/ContainerInterface.cpp.obj"
+  "D:/C++/2/OOP/4 sem/oop_course2_semester2_exam/DLCircularList.cpp" "D:/C++/2/OOP/4 sem/oop_course2_semester2_exam/cmake-build-debug/CMakeFiles/oop_course2_semester2_exam.dir/DLCircularList.cpp.obj"
   "D:/C++/2/OOP/4 sem/oop_course2_semester2_exam/DLList.cpp" "D:/C++/2/OOP/4 sem/oop_course2_semester2_exam/cmake-build-debug/CMakeFiles/oop_course2_semester2_exam.dir/DLList.cpp.obj"
+  "D:/C++/2/OOP/4 sem/oop_course2_semester2_exam/Node.cpp" "D:/C++/2/OOP/4 sem/oop_course2_semester2_exam/cmake-build-debug/CMakeFiles/oop_course2_semester2_exam.dir/Node.cpp.obj"
   "D:/C++/2/OOP/4 sem/oop_course2_semester2_exam/RBTree.cpp" "D:/C++/2/OOP/4 sem/oop_course2_semester2_exam/cmake-build-debug/CMakeFiles/oop_course2_semester2_exam.dir/RBTree.cpp.obj"
   "D:/C++/2/OOP/4 sem/oop_course2_semester2_exam/Server.cpp" "D:/C++/2/OOP/4 sem/oop_course2_semester2_exam/cmake-build-debug/CMakeFiles/oop_course2_semester2_exam.dir/Server.cpp.obj"
   "D:/C++/2/OOP/4 sem/oop_course2_semester2_exam/main.cpp" "D:/C++/2/OOP/4 sem/oop_course2_semester2_exam/cmake-build-debug/CMakeFiles/oop_course2_semester2_exam.dir/main.cpp.obj"
