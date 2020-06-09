@@ -28,3 +28,8 @@ template<>
 void Node<Book>::generate() {
     data.random();
 }
+
+template<>
+void Node<Server>::generate() {
+    data.random();
+}
