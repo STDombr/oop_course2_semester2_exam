@@ -1,10 +1,12 @@
 #include <iostream>
-#include <ctime>
+#include <DLList.h>
 
 using namespace std;
 
 int main() {
-    srand(time(0));
 
+    DLList<int> ta;
+    ta.generate(5);
+    ta.display();
     return 0;
 }

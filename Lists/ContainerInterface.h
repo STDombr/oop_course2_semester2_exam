@@ -22,14 +22,7 @@ public:
      *
      * @param val The value that would be added to the List
      */
-    virtual void add_element(T val) = 0;
-
-    /**
-     * Pure virtual function that adds the Node to the List
-     *
-     * @param val The value that would be added to the List
-     */
-    virtual void add_node(Node<T> val) = 0;
+    virtual void add_node(T val) = 0;
 
     /**
      * Deletes the last element of the list
