@@ -2,9 +2,10 @@
 // Created by User on 09.06.2020.
 //
 
-#include "Node.h"
+//#include "Node.h"
 
 
+/*
 template<class T>
 Node<T>::Node() {
     next = prev = nullptr;
@@ -32,4 +33,4 @@ void Node<Book>::generate() {
 template<>
 void Node<Server>::generate() {
     data.random();
-}
+}*/
