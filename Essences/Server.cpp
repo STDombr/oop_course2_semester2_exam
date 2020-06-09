@@ -3,7 +3,7 @@
 //
 
 #include "Server.h"
-
+#include <iostream>
 #include <utility>
 
 Server::Server() = default;
@@ -70,4 +70,9 @@ void Server::random() {
     this->companyName = temp2;
     this->rackModel = temp3;
     this->dataCenterAddress = temp4;
+}
+
+std::ostream& operator << (std::ostream &out, Server temp) {
+    out<<"serverID: "<<temp.serverID<<", companyName: "<<temp.companyName<<", dataCenterAddress: "<<temp.dataCenterAddress<<", rackModel: "<<temp.rackModel<<endl;
+    return out;
 }

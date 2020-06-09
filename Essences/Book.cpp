@@ -3,6 +3,7 @@
 //
 
 #include "Book.h"
+#include <iostream>
 
 Book::Book() = default;
 
@@ -76,4 +77,9 @@ bool operator<(Book left, Book right) {
 }
 bool operator<=(Book left, Book right) {
     return (left.bookName <= right.bookName);
+}
+
+std::ostream& operator << (std::ostream &out, Book temp) {
+    out<<"name: "<<temp.bookName<<", author: "<<temp.author<<", year: "<<temp.year<<", company: "<<temp.publishingCompany<<", genre: "<<temp.genre<<endl;
+    return out;
 }

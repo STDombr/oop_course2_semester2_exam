@@ -1,12 +1,19 @@
 #include <iostream>
-#include <DLList.h>
+#include <ctime>
+#include <ContainerInterface.h>
+#include <Book.h>
+#include <Server.h>
 
 using namespace std;
 
 int main() {
+    srand(time(0));
+    DLList<Server> Vetalmon;
+    Vetalmon.generate(2);
+    Vetalmon.display();
 
-    DLList<int> ta;
-    ta.generate(5);
-    ta.display();
+    DLCircularList<Book> STDombr;
+    STDombr.generate(2);
+    STDombr.display();
     return 0;
 }

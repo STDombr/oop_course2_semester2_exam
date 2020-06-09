@@ -8,6 +8,7 @@
 #include "Server.h"
 #include "Book.h"
 
+
 /**
  * Template Node structure that is used in the List structure
  */
@@ -46,7 +47,7 @@ void Node<T>::generate() {
 }
 
 template<>
-void Node<std::string>::generate() {
+inline void Node<std::string>::generate() {
     std::string s="";
     int l=rand()%10+1;
     for (int j=0;j<l;j++)
@@ -55,12 +56,12 @@ void Node<std::string>::generate() {
 }
 
 template<>
-void Node<Book>::generate() {
+inline void Node<Book>::generate() {
     data.random();
 }
 
 template<>
-void Node<Server>::generate() {
+inline void Node<Server>::generate() {
     data.random();
 }
 

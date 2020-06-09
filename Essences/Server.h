@@ -41,6 +41,8 @@ public:
     friend bool operator <= (Server left, Server right);
     friend bool operator > (Server left, Server right);
     friend bool operator < (Server left, Server right);
+
+    friend std::ostream& operator << (std::ostream &out, Server temp);
 };
 
 

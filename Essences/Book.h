@@ -34,6 +34,7 @@ public:
     friend bool operator >= (Book left, Book right);
     friend bool operator < (Book left, Book right);
     friend bool operator <= (Book left, Book right);
+    friend std::ostream& operator << (std::ostream &out, Book temp);
 };
 
 
