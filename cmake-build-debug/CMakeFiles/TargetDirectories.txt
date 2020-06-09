@@ -1,3 +1,0 @@
-D:/C++/2/OOP/4 sem/oop_course2_semester2_exam/cmake-build-debug/CMakeFiles/oop_course2_semester2_exam.dir
-D:/C++/2/OOP/4 sem/oop_course2_semester2_exam/cmake-build-debug/CMakeFiles/edit_cache.dir
-D:/C++/2/OOP/4 sem/oop_course2_semester2_exam/cmake-build-debug/CMakeFiles/rebuild_cache.dir
