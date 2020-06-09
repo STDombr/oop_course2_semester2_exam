@@ -46,5 +46,10 @@ CMakeFiles/oop_course2_semester2_exam.dir/RBTree.cpp.obj: ../Server.h
 CMakeFiles/oop_course2_semester2_exam.dir/Server.cpp.obj: ../Server.cpp
 CMakeFiles/oop_course2_semester2_exam.dir/Server.cpp.obj: ../Server.h
 
+CMakeFiles/oop_course2_semester2_exam.dir/main.cpp.obj: ../Book.h
+CMakeFiles/oop_course2_semester2_exam.dir/main.cpp.obj: ../ContainerInterface.h
+CMakeFiles/oop_course2_semester2_exam.dir/main.cpp.obj: ../DLCircularList.h
+CMakeFiles/oop_course2_semester2_exam.dir/main.cpp.obj: ../Node.h
+CMakeFiles/oop_course2_semester2_exam.dir/main.cpp.obj: ../Server.h
 CMakeFiles/oop_course2_semester2_exam.dir/main.cpp.obj: ../main.cpp
 
