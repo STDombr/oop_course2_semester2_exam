@@ -602,7 +602,7 @@ inline bool DLCircularList<T>::generate(int amount) {
     Node<T> *temp = new Node<T>();
 
     for(int i = 0 ; i < amount; i++){
-        temp->random();
+        temp->generate();
         add_node(*temp);
     }
     return true;
