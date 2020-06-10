@@ -129,6 +129,8 @@ public:
 
     virtual bool delete_book_by_name(string name) = 0;
 
+    //virtual ContainerInterface* union_operation(ContainerInterface* cont1) = 0;
+
 };
 /**
  * Template interface structure for the List structure that is based on the linked list
@@ -334,8 +336,21 @@ public:
     DLList<T>* get_part_start(int amount) ;
 
     DLList<T>* get_part_end(int amount) ;
-};
 
+    DLList<T>* union_operation(DLList<T>* in);
+
+    //ContainerInterface<T>* union_operation(ContainerInterface<T>* cont1) override;
+};
+template<class T>
+DLList<T>* DLList<T>::union_operation(DLList<T>* in){
+    DLList<T>* outputList = this;
+    for(int i = 0 ; i < in->get_curr_size(); i++){
+        if(!outputList->is_present(in[i])){
+            outputList->add_node(in[i]);
+        }
+    }
+    return outputList;
+}
 /**
  * UNION OPERATION
  */
@@ -1126,6 +1141,8 @@ DLList<T> operator + (DLList<T> l1, DLList<T> l2){
     return outputList;
 }
 
+
+
 template <class T>
 DLList<T> operator * (DLList<T> l1, DLList<T> l2){
     DLList<T> outputList;
@@ -1361,6 +1378,8 @@ public:
     DLCircularList<T>* get_part_start(int amount) ;
 
     DLCircularList<T>* get_part_end(int amount) ;
+
+    //ContainerInterface<T>* union_operation(ContainerInterface<T>* cont1) override;
 };
 
 /**
@@ -2186,7 +2205,6 @@ inline void DLCircularList<Server>::bucketsort() {
             temp = temp->next;
         }
 }
-
 
 
 #endif //OOP_COURSE2_SEMESTER2_EXAM_CONTAINERINTERFACE_H
