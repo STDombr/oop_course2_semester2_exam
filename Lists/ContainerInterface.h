@@ -339,8 +339,68 @@ public:
 
     DLList<T>* union_operation(DLList<T>* in);
 
+    DLList<T>* intersection_operation(DLList<T>* in);
+
+    DLList<T>* except_operation(DLList<T>* in);
+
+    DLList<T>* symmetric_operation(DLList<T>* in);
+
+
+
     //ContainerInterface<T>* union_operation(ContainerInterface<T>* cont1) override;
 };
+template<class T>
+DLList<T>* DLList<T>::symmetric_operation(DLList<T> *in){
+    DLList<T> *outputList = new DLList<T>;
+    DLList<T> *outputList1 = new DLList<T>;
+    DLList<T> *outputList2 = new DLList<T>;
+    for(int i = 0 ; i < this->get_curr_size(); i++){
+        if(!outputList->is_present((*this)[i])){
+            outputList->add_node((*this)[i]);
+        }
+    }
+
+    outputList2 = this->union_operation(in);
+    outputList1 = this->intersection_operation(in);
+    outputList = outputList2->except_operation(outputList1);
+
+    return outputList;
+}
+
+template<class T>
+DLList<T>* DLList<T>::intersection_operation(DLList<T> *in){
+    DLList<T> *outputList = new DLList<T>;
+    for(int i = 0 ; i < this->get_curr_size(); i++){
+        if(!outputList->is_present((*this)[i])){
+            outputList->add_node((*this)[i]);
+        }
+    }
+
+    for(int i = 0 ; i < in->get_curr_size(); i++){
+        if(this->is_present((*in)[i])){
+            outputList->add_node((*in)[i]);
+        }
+    }
+    return outputList;
+}
+
+template<class T>
+DLList<T>* DLList<T>::except_operation(DLList<T> *in){
+    DLList<T> *outputList = new DLList<T>;
+    for(int i = 0 ; i < this->get_curr_size(); i++){
+        if(!outputList->is_present((*this)[i])){
+            outputList->add_node((*this)[i]);
+        }
+    }
+
+    for(int i = 0 ; i < in->get_curr_size(); i++){
+        if(!outputList->is_present((*in)[i])){
+            outputList->delete_node((*in)[i]);
+        }
+    }
+    return outputList;
+}
+
 template<class T>
 DLList<T>* DLList<T>::union_operation(DLList<T> *in){
     DLList<T> *outputList = new DLList<T>;
@@ -1384,6 +1444,14 @@ public:
 
     DLCircularList<T>* get_part_end(int amount) ;
 
+    DLCircularList<T>* union_operation(DLCircularList<T>* in);
+
+    DLCircularList<T>* intersection_operation(DLCircularList<T>* in);
+
+    DLCircularList<T>* except_operation(DLCircularList<T>* in);
+
+    DLCircularList<T>* symmetric_operation(DLCircularList<T>* in);
+
     //ContainerInterface<T>* union_operation(ContainerInterface<T>* cont1) override;
 };
 
@@ -2211,5 +2279,73 @@ inline void DLCircularList<Server>::bucketsort() {
         }
 }
 
+
+template<class T>
+ DLCircularList<T>*  DLCircularList<T>::symmetric_operation( DLCircularList<T> *in){
+     DLCircularList<T> *outputList = new  DLCircularList<T>;
+     DLCircularList<T> *outputList1 = new  DLCircularList<T>;
+     DLCircularList<T> *outputList2 = new  DLCircularList<T>;
+    for(int i = 0 ; i < this->get_curr_size(); i++){
+        if(!outputList->is_present((*this)[i])){
+            outputList->add_node((*this)[i]);
+        }
+    }
+
+    outputList2 = this->union_operation(in);
+    outputList1 = this->intersection_operation(in);
+    outputList = outputList2->except_operation(outputList1);
+
+    return outputList;
+}
+
+template<class T>
+ DLCircularList<T>*  DLCircularList<T>::intersection_operation( DLCircularList<T> *in){
+     DLCircularList<T> *outputList = new  DLCircularList<T>;
+    for(int i = 0 ; i < this->get_curr_size(); i++){
+        if(!outputList->is_present((*this)[i])){
+            outputList->add_node((*this)[i]);
+        }
+    }
+
+    for(int i = 0 ; i < in->get_curr_size(); i++){
+        if(this->is_present((*in)[i])){
+            outputList->add_node((*in)[i]);
+        }
+    }
+    return outputList;
+}
+
+template<class T>
+ DLCircularList<T>*  DLCircularList<T>::except_operation( DLCircularList<T> *in){
+     DLCircularList<T> *outputList = new  DLCircularList<T>;
+    for(int i = 0 ; i < this->get_curr_size(); i++){
+        if(!outputList->is_present((*this)[i])){
+            outputList->add_node((*this)[i]);
+        }
+    }
+
+    for(int i = 0 ; i < in->get_curr_size(); i++){
+        if(!outputList->is_present((*in)[i])){
+            outputList->delete_node((*in)[i]);
+        }
+    }
+    return outputList;
+}
+
+template<class T>
+ DLCircularList<T>*  DLCircularList<T>::union_operation(DLCircularList<T> *in){
+      DLCircularList<T> *outputList = new  DLCircularList<T>;
+     for(int i = 0 ; i < this->get_curr_size(); i++){
+         if(!outputList->is_present((*this)[i])){
+             outputList->add_node((*this)[i]);
+         }
+     }
+     for(int i = 0 ; i < in->get_curr_size(); i++){
+         if(!outputList->is_present((*in)[i])){
+             outputList->add_node((*in)[i]);
+         }
+     }
+     return outputList;
+ }
 
 #endif //OOP_COURSE2_SEMESTER2_EXAM_CONTAINERINTERFACE_H
