@@ -12,7 +12,17 @@ ContainerInterface<T> *I1;
 template<typename T>
 ContainerInterface<T> *I2;
 template<typename T>
-ContainerInterface<T> *I3;
+DLList<T> *DL1;
+template<typename T>
+DLList<T> *DL2;
+template<typename T>
+DLList<T> *DL3;
+template<typename T>
+DLCircularList<T> *DLC1;
+template<typename T>
+DLCircularList<T> *DLC2;
+template<typename T>
+DLCircularList<T> *DLC3;
 
 MainWindow::MainWindow(QWidget *parent) :
     QMainWindow(parent),
@@ -21,12 +31,10 @@ MainWindow::MainWindow(QWidget *parent) :
     ui->setupUi(this);
     ui->radioButton_DL->click();
     ui->radioButton_Books->click();
-    DLList<Book> *temp1 = new DLList<Book>;
-    I1<Book> = temp1;
-    DLList<Book> *temp2 = new DLList<Book>;
-    I2<Book> = temp2;
-    DLList<Book> *temp3 = new DLList<Book>;
-    I3<Book> = temp3;
+    DL1<Book> = new DLList<Book>;
+    I1<Book> = DL1<Book>;
+    DL2<Book> = new DLList<Book>;
+    I2<Book> = DL2<Book>;
 
 }
 
@@ -205,30 +213,24 @@ void MainWindow::on_radioButton_DL_clicked()
     ui->List_2->clear();
     if (radio_data == 1)
     {
-        DLList<Book> *temp1 = new DLList<Book>;
-        I1<Book> = temp1;
-        DLList<Book> *temp2 = new DLList<Book>;
-        I2<Book> = temp2;
-        DLList<Book> *temp3 = new DLList<Book>;
-        I3<Book> = temp3;
+        DL1<Book> = new DLList<Book>;
+        I1<Book> = DL1<Book>;
+        DL2<Book> = new DLList<Book>;
+        I2<Book> = DL2<Book>;
     }
     else if (radio_data == 2)
     {
-        DLList<Server> *temp1 = new DLList<Server>;
-        I1<Server> = temp1;
-        DLList<Server> *temp2 = new DLList<Server>;
-        I2<Server> = temp2;
-        DLList<Server> *temp3 = new DLList<Server>;
-        I3<Server> = temp3;
+        DL1<Server> = new DLList<Server>;
+        I1<Server> = DL1<Server>;
+        DL2<Server> = new DLList<Server>;
+        I2<Server> = DL1<Server>;
     }
     else if (radio_data == 3)
     {
-        DLList<int> *temp1 = new DLList<int>;
-        I1<int> = temp1;
-        DLList<int> *temp2 = new DLList<int>;
-        I2<int> = temp2;
-        DLList<int> *temp3 = new DLList<int>;
-        I3<int> = temp3;
+        DL1<int> = new DLList<int>;
+        I1<int> = DL1<int>;
+        DL2<int> = new DLList<int>;
+        I2<int> = DL2<int>;
     }
     radio_link = 1;
 }
@@ -239,30 +241,24 @@ void MainWindow::on_radioButton_DLC_clicked()
     ui->List_2->clear();
     if (radio_data == 1)
     {
-        DLCircularList<Book> *temp1 = new DLCircularList<Book>;
-        I1<Book> = temp1;
-        DLCircularList<Book> *temp2 = new DLCircularList<Book>;
-        I2<Book> = temp2;
-        DLCircularList<Book> *temp3 = new DLCircularList<Book>;
-        I3<Book> = temp3;
+        DLC1<Book> = new DLCircularList<Book>;
+        I1<Book> = DLC1<Book>;
+        DLC2<Book> = new DLCircularList<Book>;
+        I2<Book> = DLC2<Book>;
     }
     else if (radio_data == 2)
     {
-        DLCircularList<Server> *temp1 = new DLCircularList<Server>;
-        I1<Server> = temp1;
-        DLCircularList<Server> *temp2 = new DLCircularList<Server>;
-        I2<Server> = temp2;
-        DLCircularList<Server> *temp3 = new DLCircularList<Server>;
-        I3<Server> = temp3;
+        DLC1<Server> = new DLCircularList<Server>;
+        I1<Server> = DLC1<Server>;
+        DLC2<Server> = new DLCircularList<Server>;
+        I2<Server> = DLC2<Server>;
     }
     else if (radio_data == 3)
     {
-        DLCircularList<int> *temp1 = new DLCircularList<int>;
-        I1<int> = temp1;
-        DLCircularList<int> *temp2 = new DLCircularList<int>;
-        I2<int> = temp2;
-        DLCircularList<int> *temp3 = new DLCircularList<int>;
-        I3<int> = temp3;
+        DLC1<int> = new DLCircularList<int>;
+        I1<int> = DLC1<int>;
+        DLC2<int> = new DLCircularList<int>;
+        I2<int> = DLC2<int>;
     }
     radio_link = 2;
 }
@@ -273,20 +269,16 @@ void MainWindow::on_radioButton_Books_clicked()
     ui->List_2->clear();
     if (radio_link == 1)
     {
-        DLList<Book> *temp1 = new DLList<Book>;
-        I1<Book> = temp1;
-        DLList<Book> *temp2 = new DLList<Book>;
-        I2<Book> = temp2;
-        DLList<Book> *temp3 = new DLList<Book>;
-        I3<Book> = temp3;
+        DL1<Book> = new DLList<Book>;
+        I1<Book> = DL1<Book>;
+        DL2<Book> = new DLList<Book>;
+        I2<Book> = DL2<Book>;
     } else
     {
-        DLCircularList<Book> *temp1 = new DLCircularList<Book>;
-        I1<Book> = temp1;
-        DLCircularList<Book> *temp2 = new DLCircularList<Book>;
-        I2<Book> = temp2;
-        DLCircularList<Book> *temp3 = new DLCircularList<Book>;
-        I3<Book> = temp3;
+        DLC1<Book> = new DLCircularList<Book>;
+        I1<Book> = DLC1<Book>;
+        DLC2<Book> = new DLCircularList<Book>;
+        I2<Book> = DLC2<Book>;
     }
     radio_data = 1;
 }
@@ -297,20 +289,16 @@ void MainWindow::on_radioButton_Servers_clicked()
     ui->List_2->clear();
     if (radio_link == 1)
     {
-        DLList<Server> *temp1 = new DLList<Server>;
-        I1<Server> = temp1;
-        DLList<Server> *temp2 = new DLList<Server>;
-        I2<Server> = temp2;
-        DLList<Server> *temp3 = new DLList<Server>;
-        I3<Server> = temp3;
+        DL1<Server> = new DLList<Server>;
+        I1<Server> = DL1<Server>;
+        DL2<Server> = new DLList<Server>;
+        I2<Server> = DL2<Server>;
     } else
     {
-        DLCircularList<Server> *temp1 = new DLCircularList<Server>;
-        I1<Server> = temp1;
-        DLCircularList<Server> *temp2 = new DLCircularList<Server>;
-        I2<Server> = temp2;
-        DLCircularList<Server> *temp3 = new DLCircularList<Server>;
-        I3<Server> = temp3;
+        DLC1<Server> = new DLCircularList<Server>;
+        I1<Server> = DLC1<Server>;
+        DLC2<Server> = new DLCircularList<Server>;
+        I2<Server> = DLC2<Server>;
     }
     radio_data = 2;
 }
@@ -321,20 +309,16 @@ void MainWindow::on_radioButton_int_clicked()
     ui->List_2->clear();
     if (radio_link == 1)
     {
-        DLList<int> *temp1 = new DLList<int>;
-        I1<int> = temp1;
-        DLList<int> *temp2 = new DLList<int>;
-        I2<int> = temp2;
-        DLList<int> *temp3 = new DLList<int>;
-        I3<int> = temp3;
+        DL1<int> = new DLList<int>;
+        I1<int> = DL1<int>;
+        DL2<int> = new DLList<int>;
+        I2<int> = DL2<int>;
     } else
     {
-        DLCircularList<int> *temp1 = new DLCircularList<int>;
-        I1<int> = temp1;
-        DLCircularList<int> *temp2 = new DLCircularList<int>;
-        I2<int> = temp2;
-        DLCircularList<int> *temp3 = new DLCircularList<int>;
-        I3<int> = temp3;
+        DLC1<int> = new DLCircularList<int>;
+        I1<int> = DLC1<int>;
+        DLC2<int> = new DLCircularList<int>;
+        I2<int> = DLC2<int>;
     }
     radio_data = 3;
 }
@@ -404,19 +388,34 @@ void MainWindow::on_pushButton_2_clicked()
 
 void MainWindow::on_pushButton_union_clicked()
 {
-    if (radio_data == 1)
+    if (radio_data == 1 && radio_link == 1)
     {
-
-        add_list3(I3<Book>);
+        DL3<Book> = DL1<Book>->union_operation(DL2<Book>);
+        add_list3(DL3<Book>);
     }
-    else if (radio_data == 2)
+    else if (radio_data == 2 && radio_link == 1)
     {
-
-        add_list3(I3<Server>);
+        DL3<Server> = DL1<Server>->union_operation(DL2<Server>);
+        add_list3(DL3<Server>);
     }
-    else
+    else if (radio_data == 3 && radio_link == 1)
     {
-
-        add_list3(I3<int>);
+        DL3<Book> = DL1<Book>->union_operation(DL2<Book>);
+        add_list3(DL3<int>);
+    }
+    else if (radio_data == 1 && radio_link == 2)
+    {
+        DLC3<Book> = DLC1<Book>->union_operation(DLC2<Book>);
+        add_list3(DLC3<Book>);
+    }
+    else if (radio_data == 2 && radio_link == 2)
+    {
+        DLC3<Server> = DLC1<Server>->union_operation(DLC2<Server>);
+        add_list3(DLC3<Server>);
+    }
+    else if (radio_data == 2 && radio_link == 2)
+    {
+        DLC3<int> = DLC1<Server>->union_operation(DLC2<int>);
+        add_list3(DLC3<int>);
     }
 }
