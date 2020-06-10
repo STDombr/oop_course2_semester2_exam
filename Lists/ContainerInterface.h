@@ -342,11 +342,16 @@ public:
     //ContainerInterface<T>* union_operation(ContainerInterface<T>* cont1) override;
 };
 template<class T>
-DLList<T>* DLList<T>::union_operation(DLList<T>* in){
-    DLList<T>* outputList = this;
+DLList<T>* DLList<T>::union_operation(DLList<T> *in){
+    DLList<T> *outputList = new DLList<T>;
+    for(int i = 0 ; i < this->get_curr_size(); i++){
+        if(!outputList->is_present((*this)[i])){
+            outputList->add_node((*this)[i]);
+        }
+    }
     for(int i = 0 ; i < in->get_curr_size(); i++){
-        if(!outputList->is_present(in[i])){
-            outputList->add_node(in[i]);
+        if(!outputList->is_present((*in)[i])){
+            outputList->add_node((*in)[i]);
         }
     }
     return outputList;

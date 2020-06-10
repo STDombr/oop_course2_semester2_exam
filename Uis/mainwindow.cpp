@@ -405,17 +405,17 @@ void MainWindow::on_pushButton_union_clicked()
     }
     else if (radio_data == 1 && radio_link == 2)
     {
-        DLC3<Book> = DLC1<Book>->union_operation(DLC2<Book>);
+        //DLC3<Book> = DLC1<Book>->union_operation(DLC2<Book>);
         add_list3(DLC3<Book>);
     }
     else if (radio_data == 2 && radio_link == 2)
     {
-        DLC3<Server> = DLC1<Server>->union_operation(DLC2<Server>);
+        //DLC3<Server> = DLC1<Server>->union_operation(DLC2<Server>);
         add_list3(DLC3<Server>);
     }
     else if (radio_data == 2 && radio_link == 2)
     {
-        DLC3<int> = DLC1<Server>->union_operation(DLC2<int>);
+        //DLC3<int> = DLC1<Server>->union_operation(DLC2<int>);
         add_list3(DLC3<int>);
     }
 }
