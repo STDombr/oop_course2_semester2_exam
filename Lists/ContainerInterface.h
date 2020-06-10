@@ -14,6 +14,7 @@
 #include "Server.h"
 #include "Book.h"
 #include "Node.h"
+#include <typeinfo>
 
 using namespace std;
 
@@ -37,6 +38,8 @@ public:
      * @return the element in the tail of the list
      */
     virtual bool pop_node() = 0;
+
+    virtual std::string to_string(int index) = 0;
 
     /**
      * Deletes the element from the list
@@ -126,14 +129,13 @@ public:
     virtual bool add_book_by_name(string company, string author, int year, string genre, string name) = 0;
 
     virtual bool delete_book_by_name(string name) = 0;
+
 };
-
-
 /**
  * Template interface structure for the List structure that is based on the linked list
  */
 template <class T>
-class DLList : ContainerInterface <T>  {
+class DLList : public ContainerInterface <T>  {
 private:
 
     Node <T> *head, *tail;                     //two pointers on the first and the last node
@@ -212,6 +214,7 @@ public:
      */
     DLList();
 
+    std::string to_string(int index) override;
     /**
      * Function that get the data by index
      */
@@ -359,10 +362,26 @@ template <class T>
 DLList<T> operator % (DLList<T> l1, DLList<T> l2);
 
 
+template<class T>
+std::string DLList<T>::to_string(int index)
+{
+    T element = this->get_by_index(index);
+    return std::to_string(element);
+}
 
+template<>
+inline std::string DLList<Server>::to_string(int index)
+{
+    Server element = this->get_by_index(index);
+    return element.get_serverID();
+}
 
-
-
+template<>
+inline std::string DLList<Book>::to_string(int index)
+{
+    Book element = this->get_by_index(index);
+    return element.get_bookName();
+}
 
 /**
 * Function returns the current size of the list
@@ -1142,7 +1161,7 @@ DLList<T> operator % (DLList<T> l1, DLList<T> l2){
  * Template interface structure for the List structure that is based on the linked list
  */
 template <class T>
-class DLCircularList : ContainerInterface <T>  {
+class DLCircularList : public ContainerInterface <T>  {
 private:
 
     Node <T> *head, *tail;                     //two pointers on the first and the last node
@@ -1326,6 +1345,8 @@ public:
 
     bool change_companyName_by_serverID(string serverID, string newCompanyName) override;
 
+    std::string to_string(int index) override;
+
     bool change_genre_by_name(string name, string newGenre) override ;
 
     bool add_Server_by_serverID(string serverID, string name, string dataCenter, string rackModel) override ;
@@ -1395,6 +1416,27 @@ int DLCircularList <T> :: get_max_int(){
         start = start->next;
     }
     return a;
+}
+
+template<class T>
+std::string DLCircularList<T>::to_string(int index)
+{
+    T element = this->get_by_index(index);
+    return std::to_string(element);
+}
+
+template<>
+inline std::string DLCircularList<Server>::to_string(int index)
+{
+    Server element = this->get_by_index(index);
+    return element.get_serverID();
+}
+
+template<>
+inline std::string DLCircularList<Book>::to_string(int index)
+{
+    Book element = this->get_by_index(index);
+    return element.get_bookName();
 }
 
 /**
@@ -1491,9 +1533,9 @@ void DLCircularList <T> :: listsplit_mergesort(Node <T> *start, Node <T> **first
     slow = start;
 
     //the algorithm on dividing the list on two lists
-    while (fast != start){
+    while (fast){
         fast = fast->next;
-        if (fast != start){
+        if (fast){
             slow = slow->next;
             fast = fast->next;
         }
@@ -2081,8 +2123,8 @@ void DLCircularList<T>::bucketsort() {
     Node<T> *temp = head;
     for (int i=0; i<node_sum; i++)
     {
-        int index = node_sum * (*temp);
-        b[index].push_back(temp);
+        int index = node_sum * (temp->data);
+        b[index].push_back(temp->data);
         temp = temp->next;
     }
     for (int i=0; i<node_sum; i++)

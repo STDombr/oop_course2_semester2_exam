@@ -1,9 +1,9 @@
 .idea/
+*.cmake*
 External/
 Debug/
 Docs/
 Release/
-build/
 bin/
 out/
 *build*/
@@ -21,3 +21,4 @@ install_manifest.txt
 *.o
 *.user
 *.bak*
+*autogen*

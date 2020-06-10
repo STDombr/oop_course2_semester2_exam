@@ -3,17 +3,17 @@
 #include <ContainerInterface.h>
 #include <Book.h>
 #include <Server.h>
+#include <QtWidgets/QApplication>
+#include "mainwindow.h"
 
 using namespace std;
 
-int main() {
+int main(int argc, char *argv[]) {
     srand(time(0));
-    DLList<Server> Vetalmon;
-    Vetalmon.generate(2);
-    Vetalmon.display();
 
-    DLCircularList<Book> STDombr;
-    STDombr.generate(2);
-    STDombr.display();
+    QApplication a(argc, argv);
+    MainWindow w;
+    w.show();
+    return a.exec();
     return 0;
 }
