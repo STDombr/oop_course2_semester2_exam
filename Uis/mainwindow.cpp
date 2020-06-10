@@ -239,29 +239,29 @@ void MainWindow::on_radioButton_DLC_clicked()
     ui->List_2->clear();
     if (radio_data == 1)
     {
-        DLList<Book> *temp1 = new DLList<Book>;
+        DLCircularList<Book> *temp1 = new DLCircularList<Book>;
         I1<Book> = temp1;
-        DLList<Book> *temp2 = new DLList<Book>;
+        DLCircularList<Book> *temp2 = new DLCircularList<Book>;
         I2<Book> = temp2;
-        DLList<Book> *temp3 = new DLList<Book>;
+        DLCircularList<Book> *temp3 = new DLCircularList<Book>;
         I3<Book> = temp3;
     }
     else if (radio_data == 2)
     {
-        DLList<Server> *temp1 = new DLList<Server>;
+        DLCircularList<Server> *temp1 = new DLCircularList<Server>;
         I1<Server> = temp1;
-        DLList<Server> *temp2 = new DLList<Server>;
+        DLCircularList<Server> *temp2 = new DLCircularList<Server>;
         I2<Server> = temp2;
-        DLList<Server> *temp3 = new DLList<Server>;
+        DLCircularList<Server> *temp3 = new DLCircularList<Server>;
         I3<Server> = temp3;
     }
     else if (radio_data == 3)
     {
-        DLList<int> *temp1 = new DLList<int>;
+        DLCircularList<int> *temp1 = new DLCircularList<int>;
         I1<int> = temp1;
-        DLList<int> *temp2 = new DLList<int>;
+        DLCircularList<int> *temp2 = new DLCircularList<int>;
         I2<int> = temp2;
-        DLList<int> *temp3 = new DLList<int>;
+        DLCircularList<int> *temp3 = new DLCircularList<int>;
         I3<int> = temp3;
     }
     radio_link = 2;
@@ -271,12 +271,23 @@ void MainWindow::on_radioButton_Books_clicked()
 {
     ui->List->clear();
     ui->List_2->clear();
-    DLList<Book> *temp1 = new DLList<Book>;
-    I1<Book> = temp1;
-    DLList<Book> *temp2 = new DLList<Book>;
-    I2<Book> = temp2;
-    DLList<Book> *temp3 = new DLList<Book>;
-    I3<Book> = temp3;
+    if (radio_link == 1)
+    {
+        DLList<Book> *temp1 = new DLList<Book>;
+        I1<Book> = temp1;
+        DLList<Book> *temp2 = new DLList<Book>;
+        I2<Book> = temp2;
+        DLList<Book> *temp3 = new DLList<Book>;
+        I3<Book> = temp3;
+    } else
+    {
+        DLCircularList<Book> *temp1 = new DLCircularList<Book>;
+        I1<Book> = temp1;
+        DLCircularList<Book> *temp2 = new DLCircularList<Book>;
+        I2<Book> = temp2;
+        DLCircularList<Book> *temp3 = new DLCircularList<Book>;
+        I3<Book> = temp3;
+    }
     radio_data = 1;
 }
 
@@ -284,12 +295,23 @@ void MainWindow::on_radioButton_Servers_clicked()
 {
     ui->List->clear();
     ui->List_2->clear();
-    DLList<Server> *temp1 = new DLList<Server>;
-    I1<Server> = temp1;
-    DLList<Server> *temp2 = new DLList<Server>;
-    I2<Server> = temp2;
-    DLList<Server> *temp3 = new DLList<Server>;
-    I3<Server> = temp3;
+    if (radio_link == 1)
+    {
+        DLList<Server> *temp1 = new DLList<Server>;
+        I1<Server> = temp1;
+        DLList<Server> *temp2 = new DLList<Server>;
+        I2<Server> = temp2;
+        DLList<Server> *temp3 = new DLList<Server>;
+        I3<Server> = temp3;
+    } else
+    {
+        DLCircularList<Server> *temp1 = new DLCircularList<Server>;
+        I1<Server> = temp1;
+        DLCircularList<Server> *temp2 = new DLCircularList<Server>;
+        I2<Server> = temp2;
+        DLCircularList<Server> *temp3 = new DLCircularList<Server>;
+        I3<Server> = temp3;
+    }
     radio_data = 2;
 }
 
@@ -297,12 +319,23 @@ void MainWindow::on_radioButton_int_clicked()
 {
     ui->List->clear();
     ui->List_2->clear();
-    DLList<int> *temp1 = new DLList<int>;
-    I1<int> = temp1;
-    DLList<int> *temp2 = new DLList<int>;
-    I2<int> = temp2;
-    DLList<int> *temp3 = new DLList<int>;
-    I3<int> = temp3;
+    if (radio_link == 1)
+    {
+        DLList<int> *temp1 = new DLList<int>;
+        I1<int> = temp1;
+        DLList<int> *temp2 = new DLList<int>;
+        I2<int> = temp2;
+        DLList<int> *temp3 = new DLList<int>;
+        I3<int> = temp3;
+    } else
+    {
+        DLCircularList<int> *temp1 = new DLCircularList<int>;
+        I1<int> = temp1;
+        DLCircularList<int> *temp2 = new DLCircularList<int>;
+        I2<int> = temp2;
+        DLCircularList<int> *temp3 = new DLCircularList<int>;
+        I3<int> = temp3;
+    }
     radio_data = 3;
 }
 
