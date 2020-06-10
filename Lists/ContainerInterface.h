@@ -1533,13 +1533,13 @@ void DLCircularList <T> :: listsplit_mergesort(Node <T> *start, Node <T> **first
     slow = start;
 
     //the algorithm on dividing the list on two lists
-    while (fast){
+    do {
         fast = fast->next;
         if (fast){
             slow = slow->next;
             fast = fast->next;
         }
-    }
+    }while (fast != start);
 
     *first = start;
     *second = slow->next;
@@ -1800,6 +1800,7 @@ bool DLCircularList<T>::pop_node() {
     }
     tail = tail->prev;
     tail->next = head;
+    head->prev = tail;
     node_sum--;
     delete temp;
     return true;
