@@ -1523,6 +1523,11 @@ void DLCircularList <T> :: _quicksort(Node <T> *start, Node <T> *finish){
 template <class T>
 void DLCircularList <T> :: listsplit_mergesort(Node <T> *start, Node <T> **first, Node <T> **second){
 
+    if(start->next == nullptr){
+        cout << "wtd" << endl;
+        return;
+    }
+
     //Catching the possible error
     if (start == nullptr){
         cout<<"Unexpected error."<<endl;
@@ -1536,11 +1541,11 @@ void DLCircularList <T> :: listsplit_mergesort(Node <T> *start, Node <T> **first
     //the algorithm on dividing the list on two lists
     do {
         fast = fast->next;
-        if (fast){
+        if (fast !=  this->head){
             slow = slow->next;
             fast = fast->next;
         }
-    }while (fast != start);
+    }while (fast != this->head);
 
     *first = start;
     *second = slow->next;
