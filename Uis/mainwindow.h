@@ -25,6 +25,12 @@ private slots:
 
     void on_pushButton_sort_clicked();
 
+    void on_pushButton_intersect_clicked();
+
+    void on_pushButton_except_clicked();
+
+    void on_pushButton_Sexcept_clicked();
+
     void on_pushButton_sort_2_clicked();
 
     void on_radioButton_DL_clicked();
