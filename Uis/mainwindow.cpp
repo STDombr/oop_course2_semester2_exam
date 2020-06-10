@@ -413,7 +413,7 @@ void MainWindow::on_pushButton_union_clicked()
         DLC3<Server> = DLC1<Server>->union_operation(DLC2<Server>);
         add_list3(DLC3<Server>);
     }
-    else if (radio_data == 2 && radio_link == 2)
+    else if (radio_data == 3 && radio_link == 2)
     {
         DLC3<int> = DLC1<int>->union_operation(DLC2<int>);
         add_list3(DLC3<int>);
@@ -447,7 +447,7 @@ void MainWindow::on_pushButton_intersect_clicked()
         DLC3<Server> = DLC1<Server>->intersection_operation(DLC2<Server>);
         add_list3(DLC3<Server>);
     }
-    else if (radio_data == 2 && radio_link == 2)
+    else if (radio_data == 3 && radio_link == 2)
     {
         DLC3<int> = DLC1<int>->intersection_operation(DLC2<int>);
         add_list3(DLC3<int>);
@@ -471,7 +471,7 @@ void MainWindow::on_pushButton_except_clicked()
     } else if (radio_data == 2 && radio_link == 2) {
         DLC3<Server> = DLC1<Server>->except_operation(DLC2<Server>);
         add_list3(DLC3<Server>);
-    } else if (radio_data == 2 && radio_link == 2) {
+    } else if (radio_data == 3 && radio_link == 2) {
         DLC3<int> = DLC1<int>->except_operation(DLC2<int>);
         add_list3(DLC3<int>);
     }
@@ -494,7 +494,7 @@ void MainWindow::on_pushButton_Sexcept_clicked()
     } else if (radio_data == 2 && radio_link == 2) {
         DLC3<Server> = DLC1<Server>->symmetric_operation(DLC2<Server>);
         add_list3(DLC3<Server>);
-    } else if (radio_data == 2 && radio_link == 2) {
+    } else if (radio_data == 3 && radio_link == 2) {
         DLC3<int> = DLC1<int>->symmetric_operation(DLC2<int>);
         add_list3(DLC3<int>);
     }
