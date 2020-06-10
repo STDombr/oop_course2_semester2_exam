@@ -405,17 +405,97 @@ void MainWindow::on_pushButton_union_clicked()
     }
     else if (radio_data == 1 && radio_link == 2)
     {
-        //DLC3<Book> = DLC1<Book>->union_operation(DLC2<Book>);
+        DLC3<Book> = DLC1<Book>->union_operation(DLC2<Book>);
         add_list3(DLC3<Book>);
     }
     else if (radio_data == 2 && radio_link == 2)
     {
-        //DLC3<Server> = DLC1<Server>->union_operation(DLC2<Server>);
+        DLC3<Server> = DLC1<Server>->union_operation(DLC2<Server>);
         add_list3(DLC3<Server>);
     }
     else if (radio_data == 2 && radio_link == 2)
     {
-        //DLC3<int> = DLC1<Server>->union_operation(DLC2<int>);
+        DLC3<int> = DLC1<Server>->union_operation(DLC2<int>);
+        add_list3(DLC3<int>);
+    }
+}
+
+void MainWindow::on_pushButton_intersect_clicked()
+{
+    if (radio_data == 1 && radio_link == 1)
+    {
+        DL3<Book> = DL1<Book>->intersection_operation(DL2<Book>);
+        add_list3(DL3<Book>);
+    }
+    else if (radio_data == 2 && radio_link == 1)
+    {
+        DL3<Server> = DL1<Server>->intersection_operation(DL2<Server>);
+        add_list3(DL3<Server>);
+    }
+    else if (radio_data == 3 && radio_link == 1)
+    {
+        DL3<Book> = DL1<Book>->intersection_operation(DL2<Book>);
+        add_list3(DL3<int>);
+    }
+    else if (radio_data == 1 && radio_link == 2)
+    {
+        DLC3<Book> = DLC1<Book>->intersection_operation(DLC2<Book>);
+        add_list3(DLC3<Book>);
+    }
+    else if (radio_data == 2 && radio_link == 2)
+    {
+        DLC3<Server> = DLC1<Server>->intersection_operation(DLC2<Server>);
+        add_list3(DLC3<Server>);
+    }
+    else if (radio_data == 2 && radio_link == 2)
+    {
+        DLC3<int> = DLC1<Server>->intersection_operation(DLC2<int>);
+        add_list3(DLC3<int>);
+    }
+}
+
+void MainWindow::on_pushButton_except_clicked()
+{
+    if (radio_data == 1 && radio_link == 1) {
+        DL3<Book> = DL1<Book>->except_operation(DL2<Book>);
+        add_list3(DL3<Book>);
+    } else if (radio_data == 2 && radio_link == 1) {
+        DL3<Server> = DL1<Server>->except_operation(DL2<Server>);
+        add_list3(DL3<Server>);
+    } else if (radio_data == 3 && radio_link == 1) {
+        DL3<Book> = DL1<Book>->except_operation(DL2<Book>);
+        add_list3(DL3<int>);
+    } else if (radio_data == 1 && radio_link == 2) {
+        DLC3<Book> = DLC1<Book>->except_operation(DLC2<Book>);
+        add_list3(DLC3<Book>);
+    } else if (radio_data == 2 && radio_link == 2) {
+        DLC3<Server> = DLC1<Server>->except_operation(DLC2<Server>);
+        add_list3(DLC3<Server>);
+    } else if (radio_data == 2 && radio_link == 2) {
+        DLC3<int> = DLC1<Server>->except_operation(DLC2<int>);
+        add_list3(DLC3<int>);
+    }
+}
+
+void MainWindow::on_pushButton_Sexcept_clicked()
+{
+    if (radio_data == 1 && radio_link == 1) {
+        DL3<Book> = DL1<Book>->symmetric_operation(DL2<Book>);
+        add_list3(DL3<Book>);
+    } else if (radio_data == 2 && radio_link == 1) {
+        DL3<Server> = DL1<Server>->symmetric_operation(DL2<Server>);
+        add_list3(DL3<Server>);
+    } else if (radio_data == 3 && radio_link == 1) {
+        DL3<Book> = DL1<Book>->symmetric_operation(DL2<Book>);
+        add_list3(DL3<int>);
+    } else if (radio_data == 1 && radio_link == 2) {
+        DLC3<Book> = DLC1<Book>->symmetric_operation(DLC2<Book>);
+        add_list3(DLC3<Book>);
+    } else if (radio_data == 2 && radio_link == 2) {
+        DLC3<Server> = DLC1<Server>->symmetric_operation(DLC2<Server>);
+        add_list3(DLC3<Server>);
+    } else if (radio_data == 2 && radio_link == 2) {
+        DLC3<int> = DLC1<Server>->symmetric_operation(DLC2<int>);
         add_list3(DLC3<int>);
     }
 }
