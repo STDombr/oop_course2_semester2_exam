@@ -1505,7 +1505,9 @@ void DLCircularList <T> :: _quicksort(Node <T> *start, Node <T> *finish){
 
     if (finish != nullptr && start != finish){
         Node <T> *pivot = partition_quicksort(start, finish);   //finding the place to pivot
-        _quicksort(start, pivot->prev);            //doing the same to the left part
+        if (pivot != start)
+            _quicksort(start, pivot->prev);            //doing the same to the left part
+        if (pivot != finish)
         _quicksort(pivot->next, finish);           //doing the same to the right part
     }
 }

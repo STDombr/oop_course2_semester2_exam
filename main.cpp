@@ -19,7 +19,7 @@ int main(int argc, char *argv[]) {
     ContainerInterface<int>* temp = new DLCircularList<int>();
     temp->generate(5);
     temp->display();
-    temp->quicksort();
+    temp->mergesort();
     temp->display();
 
 
