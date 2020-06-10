@@ -13,7 +13,15 @@ int main(int argc, char *argv[]) {
 
     QApplication a(argc, argv);
     MainWindow w;
-    w.show();
-    return a.exec();
+    //w.show();
+    //return a.exec();
+
+    ContainerInterface<int>* temp = new DLCircularList<int>();
+    temp->generate(5);
+    temp->display();
+    temp->quicksort();
+    temp->display();
+
+
     return 0;
 }
